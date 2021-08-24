@@ -3,6 +3,11 @@
 // A k sorted array is an array where each element is at most 
 // k distance away from its target position in the sorted array.
 // { Driver Code Starts
+
+// 6
+// 3 2 1 5 6 4 
+// 2
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -37,7 +42,7 @@ string isKSortedArray(int arr[], int n, int k)
     // }
     // return "yes";
 
-    //2nd using hashing
+    //2nd using map
   
     map<int,int> mp;
     for (size_t i = 0; i < n; i++) mp[arr[i]] = i;
