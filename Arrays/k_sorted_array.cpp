@@ -48,10 +48,10 @@ string isKSortedArray(int arr[], int n, int k)
     for (size_t i = 0; i < n; i++) mp[arr[i]] = i;
     int i = 0;
     for(auto p: mp)
-                {
-                if(abs(p.second - i++)>k)
-                return "No";
-                }
+        {
+        if(abs(p.second - i++)>k)
+        return "No";
+        }
     
    return "Yes";
 }
