@@ -22,8 +22,8 @@ using namespace std;
     void convertToWave(vector<int>& arr, int n){
         
     int temp = 0;
-    for (int i = 0; i<n; i++) {
-        if(arr[i+1]>=arr[1]&&i%2==0)
+    for (int i = 0; i<n-1; i+=2) {
+        // if(arr[i+1]>=arr[1]&&i%2==0)
         temp = arr[i];
         arr[i] = arr[i+1];
         arr[i+1] = temp;
