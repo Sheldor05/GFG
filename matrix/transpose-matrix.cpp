@@ -9,14 +9,22 @@ class Solution
 {   
     public:  
     //Function to find transpose of a matrix.
+     void swap(vector<vector<int> >&mat, int i, int j)
+        {
+            int temp = mat[i][j];
+            mat[i][j]=mat[j][i];
+            mat[j][i]= temp;
+        }
     void transpose(vector<vector<int> >& matrix, int n)
     { 
          int temp =0; int m= matrix.size(); int col= matrix[0].size();
         for(int i=0; i<m; i++){
             for(int j = i ; j<col; j++){
-                temp = matrix[i][j];
-                matrix[i][j]=matrix[j][i];
-                matrix[j][i]=temp;
+                // temp = matrix[i][j];
+                // matrix[i][j]=matrix[j][i];
+                // matrix[j][i]=temp;
+                    swap(matrix,i,j);   
+// 
         // void swap(int mat[][], int i, int j)
         // {
         //     int temp = mat[i][j];
@@ -31,6 +39,8 @@ class Solution
         //         }
         //     }
         // }
+            }
+        }
     }
 };
 
